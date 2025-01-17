@@ -14,10 +14,10 @@ using Microsoft.SemanticKernel.ChatCompletion;
 
 
 var builder = WebApplication.CreateBuilder(args);
-var config = new ConfigurationBuilder()
+
+builder.Configuration
     .AddUserSecrets<Program>()
-    .AddEnvironmentVariables()
-    .Build();
+    .AddEnvironmentVariables();
 
 
 // Add services to the container.
